@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://qm131mtiofij"]
+
+[ext_resource type="Script" path="res://Scrips/PlayerMovement.gd" id="1_05s11"]
+[ext_resource type="Texture2D" uid="uid://bfwwis15gay1b" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Bonemask Shadow Creature.png" id="1_qj43j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jpvhs"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_05s11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 21)
+scale = Vector2(5, 3.795)
+shape = SubResource("CapsuleShape2D_jpvhs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.308, 0.5)
+texture = ExtResource("1_qj43j")

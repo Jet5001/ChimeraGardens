@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://csbuadtfoqsb2"]
+
+[ext_resource type="Texture2D" uid="uid://bdr5d5d5uk7dd" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Son Of Valhalla.png" id="1_07lu5"]
+[ext_resource type="Script" path="res://Scrips/EnemyOverworldController.gd" id="1_tfwia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eyde"]
+size = Vector2(200, 151)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_tfwia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(90, 65.5)
+shape = SubResource("RectangleShape2D_4eyde")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["enemy"]]
+position = Vector2(95.9999, 67)
+scale = Vector2(0.344365, 0.4375)
+texture = ExtResource("1_07lu5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

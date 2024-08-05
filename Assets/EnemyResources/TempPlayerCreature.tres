@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BaseCreature" load_steps=6 format=3 uid="uid://dsldckl81riym"]
+
+[ext_resource type="Resource" uid="uid://ox87a22ro7li" path="res://Assets/BodyParts/Addons/MissingNoAdornment.tres" id="1_ak158"]
+[ext_resource type="Resource" uid="uid://2ihv4secbu7c" path="res://Assets/BodyParts/Addons/MissingNoLegs.tres" id="2_32sdb"]
+[ext_resource type="Resource" uid="uid://ullmkgv08is8" path="res://Assets/BodyParts/Cores/MissingNoCore.tres" id="3_t2eo6"]
+[ext_resource type="Script" path="res://Assets/EnemyResources/BaseCreature.gd" id="4_iijju"]
+[ext_resource type="Texture2D" uid="uid://dkkrbatrt0t1x" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Nature Titan Tellia.png" id="4_j1qp4"]
+
+[resource]
+script = ExtResource("4_iijju")
+currentCore = ExtResource("3_t2eo6")
+legsAddon = ExtResource("2_32sdb")
+adornmentAddon = ExtResource("1_ak158")
+name = "MissingNo"
+sprite = ExtResource("4_j1qp4")

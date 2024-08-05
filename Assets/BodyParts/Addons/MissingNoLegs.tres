@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BaseAddonPart" load_steps=4 format=3 uid="uid://2ihv4secbu7c"]
+
+[ext_resource type="Script" path="res://Assets/Moves/Bash.gd" id="1_d8xco"]
+[ext_resource type="Script" path="res://Assets/BodyParts/Addons/BaseAddonPart.gd" id="2_484ay"]
+
+[sub_resource type="Resource" id="Resource_hh76b"]
+script = ExtResource("1_d8xco")
+name = ""
+type = 4
+baseDamage = 0
+accuracy = 0.0
+isSpecial = false
+
+[resource]
+script = ExtResource("2_484ay")
+name = "MissingNoLegs"
+AdditionalHealth = 75
+AdditionalAttack = 0
+AdditionalDefence = 50
+AdditionalSpeed = -30
+AdditionalMana = 20
+AdditionalSpecial = 0
+Move = SubResource("Resource_hh76b")
+type = 2

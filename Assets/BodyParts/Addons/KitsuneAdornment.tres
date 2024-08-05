@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BaseAddonPart" load_steps=4 format=3 uid="uid://b4lcg3k6vu8fh"]
+
+[ext_resource type="Script" path="res://Assets/BodyParts/Addons/BaseAddonPart.gd" id="1_el71o"]
+[ext_resource type="Script" path="res://Assets/Moves/Bolt.gd" id="1_oh4yq"]
+
+[sub_resource type="Resource" id="Resource_38ibb"]
+script = ExtResource("1_oh4yq")
+name = ""
+type = 4
+baseDamage = 0
+accuracy = 0.0
+isSpecial = false
+
+[resource]
+script = ExtResource("1_el71o")
+name = "KitsuneTail"
+AdditionalHealth = 0
+AdditionalAttack = 0
+AdditionalDefence = 0
+AdditionalSpeed = 0
+AdditionalMana = 90
+AdditionalSpecial = 90
+Move = SubResource("Resource_38ibb")
+type = 3

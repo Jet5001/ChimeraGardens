@@ -1,0 +1,197 @@
+[gd_scene load_steps=15 format=3 uid="uid://mdve0fo6hunh"]
+
+[ext_resource type="Script" path="res://Scenes/CombatControl.gd" id="1_m5qyr"]
+[ext_resource type="Texture2D" uid="uid://73pxedoyg48h" path="res://Assets/Art/BGArt/Nature Landscapes Free Pixel Art/nature_1/orig.png" id="1_xvhg3"]
+[ext_resource type="Texture2D" uid="uid://bdr5d5d5uk7dd" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Son Of Valhalla.png" id="2_w3t6g"]
+[ext_resource type="Texture2D" uid="uid://becjtw5748mv1" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Dryad Queen Rafflesia.png" id="3_8hweb"]
+[ext_resource type="FontFile" uid="uid://b157440bfdr2c" path="res://Assets/Art/Fonts/DungeonFont.ttf" id="4_18ca2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lee5e"]
+bg_color = Color(0.333333, 0.333333, 0.333333, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pmgy"]
+bg_color = Color(0, 0.54902, 0.301961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nst0r"]
+bg_color = Color(0.380392, 0.596078, 0.94902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5bl1"]
+bg_color = Color(0.415686, 0.415686, 0.415686, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pub0y"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06q1s"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcdsh"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1my4u"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0becc"]
+bg_color = Color(0.301961, 0.301961, 0.301961, 1)
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m5qyr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -90.0
+offset_right = 1150.0
+offset_bottom = 559.0
+size_flags_horizontal = 4
+texture = ExtResource("1_xvhg3")
+
+[node name="EnemyCollection" type="VBoxContainer" parent="."]
+offset_left = 692.0
+offset_top = 173.0
+offset_right = 1137.0
+offset_bottom = 478.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyCollection"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_lee5e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8pmgy")
+value = 50.0
+
+[node name="TextureRect" type="TextureRect" parent="EnemyCollection"]
+layout_mode = 2
+texture = ExtResource("2_w3t6g")
+expand_mode = 5
+flip_h = true
+
+[node name="FriendlyCollection" type="VBoxContainer" parent="."]
+offset_left = 40.0
+offset_top = 170.0
+offset_right = 414.0
+offset_bottom = 479.0
+
+[node name="ProgressBar" type="ProgressBar" parent="FriendlyCollection"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_lee5e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8pmgy")
+value = 50.0
+
+[node name="TextureRect" type="TextureRect" parent="FriendlyCollection"]
+layout_mode = 2
+texture = ExtResource("3_8hweb")
+expand_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 497.0
+offset_right = 1150.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nst0r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 108.0
+offset_top = -33.5
+offset_right = -85.0
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 145
+
+[node name="Fight" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+size_flags_stretch_ratio = 43.85
+theme_override_fonts/font = ExtResource("4_18ca2")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pub0y")
+text = "Fight"
+icon_alignment = 1
+expand_icon = true
+language = "en"
+
+[node name="Bag" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_18ca2")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_06q1s")
+text = "Bag"
+language = "en"
+
+[node name="Run" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_18ca2")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gcdsh")
+text = "Run"
+language = "en"
+
+[node name="Capture" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_18ca2")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w5bl1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1my4u")
+text = "Capture"
+language = "en"
+
+[node name="Textbox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 15.0
+offset_right = 1134.0
+offset_bottom = 155.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0becc")
+
+[node name="Label" type="Label" parent="Textbox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 11.0
+grow_horizontal = 2
+grow_vertical = 2

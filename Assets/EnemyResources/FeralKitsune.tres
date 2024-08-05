@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BaseCreature" load_steps=5 format=3 uid="uid://5vqrf782egdc"]
+
+[ext_resource type="Resource" uid="uid://b4lcg3k6vu8fh" path="res://Assets/BodyParts/Addons/KitsuneAdornment.tres" id="1_u6lin"]
+[ext_resource type="Resource" uid="uid://disu5c7dfk4m2" path="res://Assets/BodyParts/Cores/KitsuneCore.tres" id="2_74d46"]
+[ext_resource type="Texture2D" uid="uid://bkmtk7sccexbp" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Feral Kitsune.png" id="2_552t3"]
+[ext_resource type="Script" path="res://Assets/EnemyResources/BaseCreature.gd" id="2_uhfaf"]
+
+[resource]
+script = ExtResource("2_uhfaf")
+currentCore = ExtResource("2_74d46")
+adornmentAddon = ExtResource("1_u6lin")
+name = "FeralKitsune"
+sprite = ExtResource("2_552t3")
