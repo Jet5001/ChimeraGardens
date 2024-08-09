@@ -1,2 +1,2 @@
 # ChimeraGardens
- Turn based creature collector RPG
+Chimera Gardens is a creature collector game in the vein of pokemon I am currently developing. Each creature is composed of multiple parts which can be combigned dynamically to create a variety of chimeras to fight with. Each part has an associated image, move, type and stat bonuses that can be combigned to customise any creature. It is being developed from scratch using Godot focussing on the core combat and chimera systems currently.
