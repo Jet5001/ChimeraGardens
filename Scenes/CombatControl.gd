@@ -22,7 +22,22 @@ func _ready():
 	$AnimationPlayer.stop()
 	$FriendlyCollection/FriendlyHeathBar.max_value = playerCreature.maxHealth
 	setHealth($FriendlyCollection/FriendlyHeathBar, playerCreature.currentHealth, playerCreature.maxHealth)
-	$FriendlyCollection/FriendlyTexture.texture = playerCreature.sprite
+
+	#Setup Friendly Sprite
+	$FriendlyCollection/SpritesContainer/FriendlyCore.texture = playerCreature.currentCore.sprite
+	if (playerCreature.armsAddon != null):
+		$FriendlyCollection/SpritesContainer/FriendlyArms.texture = playerCreature.armsAddon.sprite
+	else:
+		$FriendlyCollection/SpritesContainer/FriendlyArms.texture = null
+	if (playerCreature.legsAddon != null):
+		$FriendlyCollection/SpritesContainer/FriendlyLegs.texture = playerCreature.legsAddon.sprite
+	else:
+		$FriendlyCollection/SpritesContainer/FriendlyLegs.texture = null
+	if (playerCreature.adornmentAddon != null):
+		$FriendlyCollection/SpritesContainer/FriendlyAdornment.texture = playerCreature.adornmentAddon.sprite
+	else:
+		$FriendlyCollection/SpritesContainer/FriendlyAdornment.texture = null
+	
 	playerCreature.setupMoves()
 	$EnemyCollection/EnemyHealthBar.max_value =enemy.maxHealth
 	setHealth($EnemyCollection/EnemyHealthBar, enemy.currentHealth,  enemy.maxHealth)

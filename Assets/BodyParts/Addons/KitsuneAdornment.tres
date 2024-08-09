@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="BaseAddonPart" load_steps=4 format=3 uid="uid://b4lcg3k6vu8fh"]
+[gd_resource type="Resource" script_class="BaseAddonPart" load_steps=5 format=3 uid="uid://b4lcg3k6vu8fh"]
 
 [ext_resource type="Script" path="res://Assets/BodyParts/Addons/BaseAddonPart.gd" id="1_el71o"]
 [ext_resource type="Script" path="res://Assets/Moves/Bolt.gd" id="1_oh4yq"]
+[ext_resource type="Texture2D" uid="uid://bfbv83pk7w33f" path="res://Assets/Art/Sprites/SpriteParts/FeralKitsuneAdornment.png" id="3_r7hlc"]
 
 [sub_resource type="Resource" id="Resource_38ibb"]
 script = ExtResource("1_oh4yq")
@@ -14,6 +15,7 @@ isSpecial = false
 [resource]
 script = ExtResource("1_el71o")
 name = "KitsuneTail"
+sprite = ExtResource("3_r7hlc")
 AdditionalHealth = 0
 AdditionalAttack = 0
 AdditionalDefence = 0

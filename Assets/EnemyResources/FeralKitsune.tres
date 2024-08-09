@@ -11,3 +11,5 @@ currentCore = ExtResource("2_74d46")
 adornmentAddon = ExtResource("1_u6lin")
 name = "FeralKitsune"
 sprite = ExtResource("2_552t3")
+currentHealth = 0
+currentMana = 0

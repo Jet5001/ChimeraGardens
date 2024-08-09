@@ -5,8 +5,8 @@
 [ext_resource type="Resource" uid="uid://5vqrf782egdc" path="res://Assets/EnemyResources/FeralKitsune.tres" id="2_1ijew"]
 [ext_resource type="Texture2D" uid="uid://bdr5d5d5uk7dd" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Son Of Valhalla.png" id="2_w3t6g"]
 [ext_resource type="Resource" uid="uid://dsldckl81riym" path="res://Assets/EnemyResources/TempPlayerCreature.tres" id="3_0pce6"]
-[ext_resource type="Texture2D" uid="uid://becjtw5748mv1" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Dryad Queen Rafflesia.png" id="3_8hweb"]
 [ext_resource type="FontFile" uid="uid://b157440bfdr2c" path="res://Assets/Art/Fonts/DungeonFont.ttf" id="4_18ca2"]
+[ext_resource type="PackedScene" uid="uid://dvlxf8kfceg8m" path="res://BattleFriendlyCollection.tscn" id="6_bxict"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lee5e"]
 bg_color = Color(0.333333, 0.333333, 0.333333, 1)
@@ -153,24 +153,17 @@ expand_mode = 4
 stretch_mode = 5
 flip_h = true
 
-[node name="FriendlyCollection" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 170.0
-offset_right = 414.0
-offset_bottom = 479.0
-
-[node name="FriendlyHeathBar" type="ProgressBar" parent="FriendlyCollection"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_styles/background = SubResource("StyleBoxFlat_lee5e")
-theme_override_styles/fill = SubResource("StyleBoxFlat_8pmgy")
-value = 50.0
-
-[node name="FriendlyTexture" type="TextureRect" parent="FriendlyCollection"]
-layout_mode = 2
-texture = ExtResource("3_8hweb")
-expand_mode = 5
+[node name="FriendlyCollection" parent="." instance=ExtResource("6_bxict")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.462
+anchor_bottom = 0.743
+offset_left = 90.0
+offset_top = 177.0
+offset_right = -94.224
+offset_bottom = -19.464
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(256, 128)

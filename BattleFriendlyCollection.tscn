@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvlxf8kfceg8m"]
+
+[ext_resource type="Texture2D" uid="uid://becjtw5748mv1" path="res://Assets/Art/Sprites/Aekashics Librarium Static Battlers/Aekashics Librarium Static Battlers/Sideview Batch Battlers/Boss Dryad Queen Rafflesia.png" id="1_ctnfi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lee5e"]
+bg_color = Color(0.333333, 0.333333, 0.333333, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pmgy"]
+bg_color = Color(0, 0.54902, 0.301961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_au4t7"]
+
+[node name="FriendlyCollection" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = -805.0
+offset_bottom = -365.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FriendlyHeathBar" type="ProgressBar" parent="."]
+layout_mode = 2
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 346.0
+offset_bottom = 27.0
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_lee5e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8pmgy")
+value = 50.0
+
+[node name="SpritesContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_top = 29.0
+offset_right = 347.0
+offset_bottom = 283.048
+theme_override_styles/panel = SubResource("StyleBoxEmpty_au4t7")
+
+[node name="FriendlyAdornment" type="TextureRect" parent="SpritesContainer"]
+layout_mode = 2
+texture = ExtResource("1_ctnfi")
+expand_mode = 5
+flip_h = true
+
+[node name="FriendlyLegs" type="TextureRect" parent="SpritesContainer"]
+layout_mode = 2
+texture = ExtResource("1_ctnfi")
+expand_mode = 5
+flip_h = true
+
+[node name="FriendlyArms" type="TextureRect" parent="SpritesContainer"]
+layout_mode = 2
+texture = ExtResource("1_ctnfi")
+expand_mode = 5
+flip_h = true
+
+[node name="FriendlyCore" type="TextureRect" parent="SpritesContainer"]
+layout_mode = 2
+texture = ExtResource("1_ctnfi")
+expand_mode = 5
+flip_h = true
